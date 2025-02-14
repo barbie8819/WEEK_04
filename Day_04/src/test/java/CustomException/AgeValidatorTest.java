@@ -1,0 +1,24 @@
+package CustomException;
+
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+class AgeValidatorTest {
+    @Test
+    public void testValidAge() {
+        assertDoesNotThrow(() -> AgeValidator.validateAge(20));
+    }
+
+    @Test
+    public void testInvalidAge() {
+        Exception exception = assertThrows(InvalidAgeException.class, () -> AgeValidator.validateAge(16));
+        assertEquals("Age must be 18 or above", exception.getMessage());
+    }
+
+    @Test
+    public void testEdgeCaseAge18() {
+        assertDoesNotThrow(() -> AgeValidator.validateAge(18));
+    }
+
+}
