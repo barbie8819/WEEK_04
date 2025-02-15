@@ -24,7 +24,7 @@ class MainTest {
     public void testInvalidAmount() {
         BankAccount account = new BankAccount(300.0);
         assertThrows(IllegalArgumentException.class, () -> {
-            account.withdraw(-50.0);  
+            account.withdraw(-50.0);
         });
     }
 
