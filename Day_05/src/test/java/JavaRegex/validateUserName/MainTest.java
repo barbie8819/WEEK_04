@@ -15,7 +15,7 @@ class MainTest {
     @Test
     void testInvalidUsernames() {
         assertFalse(Main.isValidUsername("123user"));
-        assertFalse(Main.isValidUsername("us")); 
+        assertFalse(Main.isValidUsername("us"));
           }
 
 
