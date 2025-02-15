@@ -3,17 +3,17 @@ package JavaRegex.LicensePlateNumber;
 import java.util.Scanner;
 
 public class Main {
-    public static boolean isValidLicense(String username) {
+    public static boolean isValidLicense(String number) {
         String regex = "^[A-Z]{2,2}[0-9]{4,4}$";
-        return username.matches(regex);
+        return number.matches(regex);
     }
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter a License Plate Number : ");
-        String username = scanner.nextLine();
+        String number = scanner.nextLine();
 
-        if (isValidLicense(username)) {
+        if (isValidLicense(number)) {
             System.out.println(" Valid License number !");
         } else {
             System.out.println(" Invalid License number !");
