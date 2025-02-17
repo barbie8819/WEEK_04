@@ -24,6 +24,6 @@ class NumberUtilsTest {
         assertEquals(expected, utils.isEven(number), "Check if " + number + " is even");
     }
 
-  
+
 
 }
